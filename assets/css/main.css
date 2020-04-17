@@ -114,8 +114,7 @@
 .svg{
     width:18%;
     height:18%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: -1em;
 }
 	@media screen and (max-width: 1280px) {
 
@@ -2676,9 +2675,9 @@
 		align-items: center;
 		background: #fff;
 		cursor: default;
-		height: 6em;
+		height: 8em;
 		left: 0;
-		line-height: 6em;
+		line-height: 8em;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -2770,7 +2769,7 @@
 			}
 
 			#header nav.left {
-				left: 1em;
+				display: none;
 			}
 
 			#header nav.right {
