@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/normalize.min.css">
+    <link rel="stylesheet" href="/css/retro.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>finnsecure Backend</title>
+</head>
+
+<body>
+    <header class="typewriter">
+        <h1>OULU - NOKELA - WESTEN</h1>
+    </header>
+    <main>
+        <section>
+            <table>
+                <tr>
+                    <th>file_name</th>
+                    <th>date</th>
+                    <th>type</th>
+                </tr>
+                <tr>
+                    <td><a href="../map">&lt; back</a></td>
+                </tr>
+                <tr>
+                    <td><a href="./nokela/25/index.html">CAM_2020-03-25</a></td>
+                    <td>25.03.2020</td>
+                    <td>directory</td>
+                </tr>
+                <tr>
+                    <td><a href="./nokela/26/index.html">CAM_2020-03-26</a></td>
+                    <td>26.03.2020</td>
+                    <td>directory</td>
+                </tr>
+                <tr>
+                    <td><a href="./nokela/27/index.html">CAM_2020-03-27</a></td>
+                    <td>27.03.2020</td>
+                    <td>directory</td>
+                </tr>
+                <tr>
+                    <td><a href="./nokela/28/index.html">CAM_2020-03-28</a></td>
+                    <td>28.03.2020</td>
+                    <td>directory</td>
+                </tr>
+                <tr>
+                    <td><a href="./nokela/29/index.html">CAM_2020-03-29</a></td>
+                    <td>29.03.2020</td>
+                    <td>directory</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <table style="width: 100%;">
+            <tr>
+                <td id="access-time">Access time in 27.3ms.</td>
+                <td style="float: right;">finnsecure</td>
+            </tr>
+        </table>
+    </footer>
+
+    <script>
+        const randomTime = () => { let t = Math.random() * 100; return t.toFixed(2) }
+        document.getElementById("access-time").innerHTML = `Access time in ${randomTime()}ms`
+
+        window.addEventListener("DOMContentLoaded", event => {
+            generateCamTable("25.03.2020", {
+                // Format: [STUNDE DES VIDEOS]: [VIDEO DATEINAME]
+                1: "IMG_5090.MP4"
+            })
+        });
+    </script>
+
+</body>
+
+</html>

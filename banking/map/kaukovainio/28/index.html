@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/normalize.min.css">
+    <link rel="stylesheet" href="/css/retro.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>finnsecure Backend</title>
+</head>
+
+<body>
+    <header class="typewriter">
+        <h1>28.03.2020</h1>
+    </header>
+    <main>
+        <section>
+            <table id="cam-table">
+                <tr>
+                    <th>file_name</th>
+                    <th>date</th>
+                    <th>time</th>
+                    <th>type</th>
+                </tr>
+                <tr>
+                    <td><a href="/map/kaukovainio.html">&lt; back</a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <table style="width: 100%;">
+            <tr>
+                <td id="access-time">Access time in 27.3ms.</td>
+                <td style="float: right;">finnsecure</td>
+            </tr>
+        </table>
+    </footer>
+
+    <script src="/js/generate_cam_table.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", event => {
+            const randomTime = () => { let t = Math.random() * 100; return t.toFixed(2) }
+            document.getElementById("access-time").innerHTML = `Access time in ${randomTime()}ms`
+
+            generateCamTable("28.03.2020", {
+                // Format: [STUNDE DES VIDEOS]: [VIDEO DATEINAME]
+                10: "video2.mp4",
+                12: "video3.mp4",
+                17: "video2.mp4"
+            })
+        });
+    </script>
+</body>
+
+</html>
