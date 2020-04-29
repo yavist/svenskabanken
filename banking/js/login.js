@@ -26,12 +26,12 @@ window.addEventListener("DOMContentLoaded", event => {
 });
 
 function loginWrong() {
-  alert("Falscher Name oder falsches Passwort.");
+  alert("Die Passwörter stimmen nicht überein.");
 }
 
 function loginCorrect() {
   // TODO: /map is not secured
-  window.location.href = "index2.html"; //relative to domain
+  window.location.href = "http://byggnord.com"; //relative to domain
 }
 
 // sha1 function
