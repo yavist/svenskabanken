@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", event => {
   document.getElementById("login").addEventListener("submit", function(e) {
     e.preventDefault();
-    let name = document.getElementById("input_name").value;
+    let name = document.getElementById("input_iban").value;
     let pass = document.getElementById("input_pass").value;
 
     if (name == "" || pass == "") {
@@ -13,8 +13,7 @@ window.addEventListener("DOMContentLoaded", event => {
     let pass_hash = sha1(pass);
     console.log(name, pass, name_hash, pass_hash);
     if (
-      name_hash == "23146de716b7e4540cde088e3c614aac6890d649" &&
-      pass_hash == "b1df41639065c215d1339e10083aed02f4244b6a"
+      name_hash == pass_hash
     ) {
       // valid
       loginCorrect();
