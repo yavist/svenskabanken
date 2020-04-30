@@ -31,7 +31,7 @@ function loginWrong() {
 
 function loginCorrect() {
   // TODO: /map is not secured
-  window.location.href = "difn29efvndjvn2.html"; //relative to domain
+  window.location.href = "dashboard.html"; //relative to domain
 }
 
 // sha1 function
