@@ -2323,6 +2323,12 @@
 		overflow-x: auto;
 	}
 
+    .table-wrapper-finances {
+		-webkit-overflow-scrolling: touch;
+		overflow-x auto;
+        width:60%;
+	}
+
 	table {
 		margin: 0 0 2em 0;
 		width: 100%;
