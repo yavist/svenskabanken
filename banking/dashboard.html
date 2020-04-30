@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Svenska Banken</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				 </nav>
+                <a href="index.html" class="logo"><img class="svg" src="../images/logo.svg" alt=""></a>
+				<nav class="right">
+					<a href="http://svenskabanken.com" class="button alt">Logout</a>
+				</nav>
+			</header>
+
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Online Banking</a></li>
+					<li><a href="generic.html">Finanzstatus</a></li>
+					<li><a href="elements.html">Umsatzübersicht</a></li>
+                    <li><a href="elements.html">Service</a></li>
+				</ul>
+				
+			</nav>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">                    
+                    <h2 id="content">Guten Tag, Herr Erdlund.</h2>
+                    <p>Laut unserem System war Ihr letzter Login am <b><span id="datetime"></span></b>. Hinweis: Ihre letzte Sitzung (Session) wurde nicht über die Funktion "Abmelden" beendet. Bitte benutzen Sie zu Ihrer eigenen Sicherheit immer diese Funktion. Bitte beachten Sie hierzu auch unsere Sicherheitshinweise.</p>
+                    <hr />
+                    <header>
+                          <h2 id="elements">Funktionen</h2>
+                        <p>Legen Sie gleich los mit Ihren Bankgeschäften.</p>
+                    </header>
+                  
+                    
+						<div class="row">
+							<div class="6u 12u$(small)">
+								<h3>Online Banking</h3>
+								<p>Erledigen Sie Ihre Bankgeschäfte mit nur wenigen Klicks. Halten Sie dazu auch Ihr Smartphone bereit.</p>
+                                <ul class="actions">
+										<li><a href="banking.html" class="button">Zum Online Banking <br></a></li>
+									</ul>
+							</div>
+							<div class="6u$ 12u$(small)">
+								<h3>Finanzstatus</h3>
+								<p>Sehen Sie hier Ihren aktuellen Finanzstatus für alle Ihre Bankkonten- und Karten ein.</p>
+                                <ul class="actions">
+										<li><a href="#" class="button">Zum Online Banking <br></a></li>
+									</ul>
+							</div>
+                    </div>
+                    <div class="row">
+							<div class="6u 12u$(small)">
+								<h3>Umsatzübersicht</h3>
+								<p>Behalten Sie einen Überblick über Ihre letzten Umstätze.</p>
+                                <ul class="actions">
+										<li><a href="#" class="button">Zum Online Banking <br></a></li>
+									</ul>
+							</div>
+							<div class="6u$ 12u$(small)">
+								<h3>Service</h3>
+								<p>Klären Sie wichtige Dinge mit Ihrem Konto.</p>
+                                <ul class="actions">
+										<li><a href="#" class="button">Zum Online Banking <br></a></li>
+									</ul>
+							</div>
+                    </div>
+            
+                </div>
+        </section>
+		<!-- Footer -->
+		<footer id="footer">
+				<div class="inner">
+					
+                    <p>This website is part of an online escape game and does not represent a real business or its employees. Any similarities to real businesses are unintended.</p>
+				</div>
+				<div class="copyright">
+					&copy; Svenska Banken. Design <a href="https://templated.co">TEMPLATED</a>. Images <a href="https://unsplash.com">Unsplash</a>.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+                <script>
+        var dt = new Date();
+            document.getElementById("datetime").innerHTML = dt.toLocaleString();
+        </script>
+
+	</body>
+</html>
