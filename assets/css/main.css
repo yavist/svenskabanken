@@ -2827,12 +2827,25 @@
 				height: 3.5em;
 				line-height: 3.5em;
             font-size: 9pt;
+            display: none;
 			}
+        
+        #header nav {
+			position: absolute;
+			top: 0;
+			height: inherit;
+			line-height: inherit;
+		}
+        
+        .inner {
+		margin-top: 5em
+	}
 			
         
             #header .svg {
 				width:9em;
 			}
+        
         .button.dashboard{
             font-size: 9pt;
         }
