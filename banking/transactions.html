@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Svenska Banken</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				 </nav>
+                <a href="index.html" class="logo"><img class="svg" src="../images/logo.svg" alt=""></a>
+				<nav class="right">
+					<a href="http://svenskabanken.com" class="button alt">Logout</a>
+				</nav>
+			</header>
+
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+					<li><a href="banking.html">Online Banking</a></li>
+					<li><a href="finances.html">Finanzstatus</a></li>
+					<li><a href="transactions.html">Umsatzübersicht</a></li>
+                    <li><a href="service.html">Service</a></li>
+				</ul>
+				
+			</nav>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">                    
+                  <header>
+                          <h2 id="elements">Umsätze</h2>
+                        <p>Behalten Sie einen Überblick über die letzten Umsätze Ihrer Konten.</p>
+                    </header>
+                    <hr />
+                    
+                    
+												
+												<div class="select-wrapper">
+													<select onchange="changeEventHandler(event);" name="account">
+														<option value="SE1322785883525314857992">Privatkonto - SE1322785883525314857992</option>
+														<option value="SE4278396632632937377373">Firmenkonto Byggnord - SE4278396632632937377373</option>
+													</select>
+												</div> <br>
+										
+                                               
+				
+                    
+                    
+                   
+                   
+                  <header>
+                     <h4 id="acc_h">Konto: SE1322785883525314857992</h4>
+                      <p>Stand: <span id="datetime"></span> </p>
+                    </header>
+                  
+                        
+                  						
+									<div class="table-wrapper">
+										<table id="konto" class="transactions">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>IBAN</th>
+                                                    <th>Betrag</th>
+                                                    
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td id="col1row1">MAX HAMBURGARE VASAGATAN</td>
+													<td  id="col2row1">SE7095936915331315613515</td>
+                                                    <td id="col3row1"style="text-align: right; color:red; font-weight: 500">-211,20 SEK</td>
+												</tr>
+												<tr>
+													<td id="col1row2">COOP CENTRALEN//STOCKHOLM</td>
+                                                    <td id="col2row2">SE7389132151649327383814</td>
+                                                    <td id="col3row2"style="text-align: right;color:red; font-weight: 500">-431,20 SEK</td>
+												</tr>
+                                                <tr>
+													<td id="col1row3">BYGGNORD AB</td>
+													<td  id="col2row3">SE5948379798284545487447</td>
+                                                    <td id="col3row3"style="text-align: right;color:forestgreen; font-weight: 500">+35.124 SEK</td>
+												</tr>
+												<tr>
+													<td id="col1row4">PIZZERIA BUONA SERA</td>
+                                                    <td id="col2row4">SE0585179515146641852689</td>
+                                                    <td id="col3row4"style="text-align: right;color:red; font-weight: 500">-189,00 SEK</td>
+												</tr>
+                                                <tr>
+													<td id="col1row5">SNUSBUTIKEN//STOCKHOLM</td>
+													<td  id="col2row5">SE3843186527759832917189</td>
+                                                    <td id="col3row5"style="text-align: right;color:red; font-weight: 500">-148,00 SEK</td>
+												</tr>
+												<tr>
+													<td id="col1row6">PRESSBYRAN ODENPLAN</td>
+                                                    <td id="col2row6" >SE8343375469462819788721</td>
+                                                    <td id="col3row6"style="text-align: right;color:red; font-weight: 500">-45,00 SEK</td>
+												</tr>
+                                                <tr>
+													<td id="col1row7">EC-POS-EMV</td>
+													<td  id="col2row7"></td>
+                                                    <td id="col3row7"style="text-align: right;color:red; font-weight: 500">-5.000,00 SEK</td>
+												</tr>
+												<tr>
+													<td id="col1row8">EC-POS-EMV</td>
+                                                    <td id="col2row8"></td>
+                                                    <td id="col3row8"style="text-align: right;color:red; font-weight: 500">-2.500,00 SEK</td>
+												</tr>
+                                                <tr>
+													<td id="col1row9">FORSBERG, INES</td>
+													<td  id="col2row9">SE8894763613894848767629</td>
+                                                    <td id="col3row9"style="text-align: right;color:red; font-weight: 500">-320,00 SEK</td>
+												</tr>
+												<tr>
+													<td id="col1row10">TABBOULI AGNEGATAN</td>
+                                                    <td id="col2row10">SE0279668399481947931977</td>
+                                                    <td id="col3row10"style="text-align: right;color:red; font-weight: 500">-240,00 SEK</td>
+												</tr>
+                                                
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td style="text-align: right;"><p>Umsätze vom 01.03.2020 - 01.04.2020</p></td>
+												</tr>
+											</tfoot>
+										</table> 
+                                        
+									</div>
+                           
+                            
+                       <a href="finances.html" class="button" style="margin: 20px">Zum Finanzstatus <br></a>
+                   
+                         
+                                
+              
+                   
+
+            
+                </div>
+        </section>
+		<!-- Footer -->
+		<footer id="footer">
+				<div class="inner">
+					
+                    <p>This website is part of an online escape game and does not represent a real business or its employees. Any similarities to real businesses are unintended.</p>
+				</div>
+				<div class="copyright">
+					&copy; Svenska Banken. Design <a href="https://templated.co">TEMPLATED</a>. Images <a href="https://unsplash.com">Unsplash</a>.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+            <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleString();
+            </script>
+        
+            <script>
+                
+                 function changeEventHandler(event) {
+                     document.getElementById('acc_h').innerHTML = 'Konto: ' + event.target.value;
+                     if(event.target.value == "SE1322785883525314857992"){
+                         //name
+                         document.getElementById('col1row1').innerHTML = "MAX HAMBURGARE VASAGATAN";
+                         document.getElementById('col1row2').innerHTML = "COOP CENTRALEN//STOCKHOLM";
+                         document.getElementById('col1row3').innerHTML = "BYGGNORD AB";
+                         document.getElementById('col1row4').innerHTML = "PIZZERIA BUONA SERA";
+                         document.getElementById('col1row5').innerHTML = "SNUSBUTIKEN//STOCKHOLM";
+                         document.getElementById('col1row6').innerHTML = "PRESSBYRAN ODENPLAN";
+                         document.getElementById('col1row7').innerHTML = "EC-POS-EMV";
+                         document.getElementById('col1row8').innerHTML = "EC-POS-EMV";
+                         document.getElementById('col1row9').innerHTML = "FORSBERG, INES";
+                         document.getElementById('col1row10').innerHTML = "TABBOULI AGNEGATAN";
+                         //iban
+                         document.getElementById('col2row1').innerHTML = "SE7095936915331315613515";
+                         document.getElementById('col2row2').innerHTML = "SE7389132151649327383814";
+                         document.getElementById('col2row3').innerHTML = "SE5948379798284545487447";
+                         document.getElementById('col2row4').innerHTML = "SE0585179515146641852689";
+                         document.getElementById('col2row5').innerHTML = "SE3843186527759832917189";
+                         document.getElementById('col2row6').innerHTML = "SE8343375469462819788721";
+                         document.getElementById('col2row7').innerHTML = "";
+                         document.getElementById('col2row8').innerHTML = "";
+                         document.getElementById('col2row9').innerHTML = "SE8894763613894848767629";
+                         document.getElementById('col2row10').innerHTML = "SE0279668399481947931977";
+                         //amount
+                         document.getElementById('col3row1').innerHTML = "-211,20 SEK";
+                         document.getElementById('col3row2').innerHTML = "-431,20 SEK";
+                         document.getElementById('col3row3').innerHTML = "+35.124 SEK";
+                         document.getElementById('col3row4').innerHTML = "-189,00 SEK";
+                         document.getElementById('col3row5').innerHTML = "-148,00 SEK";
+                         document.getElementById('col3row6').innerHTML = "-45,00 SEK";
+                         document.getElementById('col3row7').innerHTML = "-5.000,00 SEK";
+                         document.getElementById('col3row8').innerHTML = "-2.500,00 SEK";
+                         document.getElementById('col3row9').innerHTML = "-320,00 SEK";
+                         document.getElementById('col3row10').innerHTML = "-240,00 SEK";
+                         
+                     } else if(event.target.value == "SE4278396632632937377373"){
+                         //name
+                         changeCompanyAcc();
+                         
+                    }  
+                 }
+                  
+                  
+                
+                
+                function changeCompanyAcc(){
+                    
+                        //name
+                         document.getElementById('col1row1').innerHTML = "STOCKHOLM STADEN";
+                         document.getElementById('col1row2').innerHTML = "ANLÄGGNING GÖTEBORG";
+                         document.getElementById('col1row3').innerHTML = "SVENSSON MÅLARE";
+                         document.getElementById('col1row4').innerHTML = "";
+                         document.getElementById('col1row5').innerHTML = "NYBORG AB";
+                         document.getElementById('col1row6').innerHTML = "D&H KRANUTHYRNING";
+                         document.getElementById('col1row7').innerHTML = "BETONG NYMÄN";
+                         document.getElementById('col1row8').innerHTML = "LOCKED-ADVENTURES HLK GBR";
+                         document.getElementById('col1row9').innerHTML = "";
+                         document.getElementById('col1row10').innerHTML = "SAAB AUTOMOBIL AB";
+                         //iban
+                         document.getElementById('col2row1').innerHTML = "SE9714572994214276779416";
+                         document.getElementById('col2row2').innerHTML = "SE8993955435326386975219";
+                         document.getElementById('col2row3').innerHTML = "SE7418685159563441296291";
+                         document.getElementById('col2row4').innerHTML = "SE3887571119318478566674";
+                         document.getElementById('col2row5').innerHTML = "SE7889527295181424497463";
+                         document.getElementById('col2row6').innerHTML = "SE1992371776545965466758";
+                         document.getElementById('col2row7').innerHTML = "SE9542979588657896363411";
+                         document.getElementById('col2row8').innerHTML = "DE2599895327249982151298";
+                         document.getElementById('col2row9').innerHTML = "SE3714192828152367817478";
+                         document.getElementById('col2row10').innerHTML = "SE8912912429228497325689";
+                         //amount
+                         document.getElementById('col3row1').innerHTML = "-25.000,00 SEK";
+                         document.getElementById('col3row2').innerHTML = "-23.000,00 SEK";
+                         document.getElementById('col3row3').innerHTML = "+40.000,00 SEK";
+                         document.getElementById('col3row4').innerHTML = "-30.000.00,00 SEK";
+                         document.getElementById('col3row5').innerHTML = "-5.800,00 SEK";
+                         document.getElementById('col3row6').innerHTML = "-3.400,00 SEK";
+                         document.getElementById('col3row7').innerHTML = "-21.000,00 SEK";
+                         document.getElementById('col3row8').innerHTML = "-2.500,00 SEK";
+                         document.getElementById('col3row9').innerHTML = "-11.000,00 SEK";
+                         document.getElementById('col3row10').innerHTML = "-21.000,00 SEK";
+                }
+                function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+                
+                $(document).ready(function(){
+
+                    var preSelected = getParameterByName("pre");
+
+                    if(preSelected == "2")
+                    {
+
+                    $  ('select[name="account"]').val("SE4278396632632937377373");
+                        changeCompanyAcc();
+                    }
+                    });
+
+            </script>
+
+	</body>
+</html>

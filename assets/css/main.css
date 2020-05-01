@@ -2326,8 +2326,11 @@
     .table-wrapper-finances {
 		-webkit-overflow-scrolling: touch;
 		overflow-x auto;
-        width:60%;
+        width:90%;
+        margin-left:auto; 
+    margin-right:auto;
 	}
+
 
 	table {
 		margin: 0 0 2em 0;
@@ -2355,6 +2358,15 @@
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: left;
 		}
+
+    .transactions th {
+    text-align: right;
+    }
+    .transactions td {
+    text-align: right;
+    }
+
+
 
 		table thead {
 			border-bottom: solid 2px #dee1e3;
@@ -2420,6 +2432,30 @@
 		white-space: nowrap;
 		text-transform: uppercase;
 	}
+.button.dashboard {
+      -moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		background-color: #fc8d08;
+		border-radius: 4px;
+		border: 0;
+		color: #ffffff;
+		cursor: pointer;
+		display: inline-block;
+		font-family: "Montserrat", sans-serif;
+		height: 3.5em;
+		line-height: 3.5em;
+		padding: 0 3.5em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+		text-transform: uppercase;
+}
 
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
@@ -2760,8 +2796,21 @@
 		}
 
 		#header {
-			height: 44px;
-			line-height: 44px;
+			-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		background: #fff;
+		cursor: default;
+		height: 8em;
+		left: 0;
+		line-height: 8em;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10001;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.075);
+		text-align: center;
 		}
 
 			#header .logo {
@@ -2773,18 +2822,22 @@
 				font-size: 1.5em;
 			}
 
-			#header nav.left {
-				display: none;
+        #header nav .button {
+				padding: 0 1em;
+				height: 3.5em;
+				line-height: 3.5em;
+            font-size: 9pt;
 			}
-
-			#header nav.right {
-				display: none;
-			}
+			
         
             #header .svg {
-				height: 30px;
-                margin-bottom: -0.5em;
+				width:9em;
 			}
+        .button.dashboard{
+            font-size: 9pt;
+        }
+        
+        
 
 	}
 
@@ -2793,7 +2846,10 @@
 		#header {
 			min-width: 320px;
 		}
-
+        
+        #header nav a[href="#menu"] {
+				font-size: 1.5em;
+			}
 	}
 
 /* Menu */

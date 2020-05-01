@@ -45,9 +45,14 @@
                         <p>Sehen Sie hier den aktuellen Finanzstatus für alle Ihre Konten ein.</p>
                     </header>
                     <hr />
-                   <h4>Meine Konten</h4>
+                  <header>
+                     <h4>Meine Konten</h4>
+                      <p>Stand: <span id="datetime"></span> </p>
+                    </header>
+                  
+                        
                     <div class="row">
-							<div class="8u 12u$(small)" style="margin-bottom: 20px">
+							<div class="6u 12u$(small)">							
 									<div class="table-wrapper-finances">
 										<table class="alt">
 											<thead>
@@ -58,42 +63,38 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td>SE1322785883525314857992</td>
-													<td style="text-align: right;"><b style="color:forestgreen">1.273.890,36 kr</b></td>
+                                                    <td><a href="transactions.html" style="color: gray">SE1322785883525314857992</a></td>
+													<td style="text-align: right; color:forestgreen; font-weight: 600">+2.167.250,36 SEK</td>
 												</tr>
 												<tr>
-													<td>SE4278396632632937377373</td>
-                                                    <td style="text-align: right;"><b style="color:forestgreen">23.791,29kr</b></td>
+                                                    <td><a href="transactions.html?pre=2" style="color: gray">SE4278396632632937377373</a></td>
+                                                    <td style="text-align: right; color:forestgreen; font-weight: 600">+23.791,29 SEK</td>
 												</tr>
 											</tbody>
 											<tfoot>
 												<tr>
 													<td colspan="1"></td>
-													<td style="text-align: right;">Summe: 1.297.681,65 kr</td>
+													<td style="text-align: right;">Summe: +2.191.041,65 SEK</td>
 												</tr>
 											</tfoot>
 										</table> 
-                                        <a href="transactions.html" class="button">Zu den Umsätzen <br></a>
+                                        
 									</div>
-                        </div>
-                        <div class="row 50% uniform">
-                        <div class="8u$ 12u$(small)">
-                            <ul class="actions">
-                                <div class="4u"><span class="image"><img src="pic01.jpg" alt="" /></span></div>
-				            </ul>
-                        </div>
-                        <div class="8u$ 12u$(small)">
-                            <ul class="actions">
-				            </ul>
-                        </div>
+                            </div>
+                            <div class="6u 12u$(small)"> 
+                                
+                    <canvas id="myChart" width="400" height="400"></canvas>
                         </div>
                     </div>
+                       <a href="transactions.html" class="button" style="margin: 20px">Zu den Umsätzen <br></a>
+                   
+                         
                                 
-                  
+                </div>
                    
 
             
-                </div>
+                
         </section>
 		<!-- Footer -->
 		<footer id="footer">
@@ -112,10 +113,80 @@
 			<script src="../assets/js/skel.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-                <script>
-        var dt = new Date();
-            document.getElementById("datetime").innerHTML = dt.toLocaleString();
-        </script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+            <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleString();
+            </script>
+        
+            <script>
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var dt = new Date().toLocaleDateString();
+                var dt_1 = new Date(2019,11,01,11,15,12).toLocaleDateString();
+                var dt_2 = new Date(2020,00,01,11,15,12).toLocaleDateString();
+                var dt_3 = new Date(2020,01,01,11,15,12).toLocaleDateString();
+                var dt_4 = new Date(2020,02,01,11,15,12).toLocaleDateString();
+                var dt_5 = new Date(2020,03,01,11,15,12).toLocaleDateString();
+                
+                var myChart = new Chart(ctx, {
+                type: 'line',
+                    data: {
+                        labels: [dt_1, dt_2, dt_3, dt_4, dt_5, dt],
+                        datasets: [{
+                        label: 'Verfügbarer Saldo gesamt',
+                        data: [5442075, 5322071, 5282060, 2182059, 2192070, 2191041],
+                        backgroundColor: [
+                'rgba(252, 141, 8, 0.2)',
+                'rgba(252, 141, 8, 0.2)',
+                'rgba(252, 141, 8, 0.2)',
+                'rgba(252, 141, 8, 0.2)',
+                'rgba(252, 141, 8, 0.2)',
+                'rgba(252, 141, 8, 0.2)'
+            ],
+            borderColor: [
+                'rgba(178, 96, 8, 1)',
+                'rgba(178, 96, 8, 1)',
+                'rgba(178, 96, 8, 1)',
+                'rgba(178, 96, 8, 1)',
+                'rgba(178, 96, 8, 1)',
+                'rgba(178, 96, 8, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+            maintainAspectRatio: false,
+        tooltips: {
+          callbacks: {
+                label: function(tooltipItem, data) {
+                    var value = data.datasets[0].data[tooltipItem.index];
+                    if(parseInt(value) >= 1000){
+                               return 'SEK ' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                            } else {
+                               return 'SEK ' + value;
+                            }
+                }
+          }
+        },// end callbacks
+        scales: {
+         yAxes: [{
+                    ticks: {
+                        beginAtZero:true,
+                        callback: function(value, index, values) {
+                            if(parseInt(value) >= 1000){
+                               return 'SEK ' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                            } else {
+                               return 'SEK ' + value;
+                            }
+                       }                            
+                    }
+                }]
+        }
+        
+    }
+});
+            </script>
 
 	</body>
 </html>
