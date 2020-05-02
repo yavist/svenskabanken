@@ -2131,6 +2131,7 @@
 
 		.image.round img {
 			border-radius: 100%;
+            height:100%;
 		}
 
 		.image.main {
@@ -2675,7 +2676,7 @@
 		}
 
 		.wrapper.style1 {
-			background: #5a3f11;
+			background: #fc8d08;
 			color: #fcdcd6;
 		}
 
@@ -2769,6 +2770,7 @@
 					font-size: 2em;
 					color: #dee1e3;
 					z-index: 10005;
+                         display: none;
 				}
 
 					#header nav a[href="#menu"]:before {
@@ -2796,7 +2798,7 @@
 		}
 
 		#header {
-			-moz-align-items: center;
+        -moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
@@ -2837,9 +2839,16 @@
 			line-height: inherit;
 		}
         
-        .inner {
-		margin-top: 5em
-	}
+        #header nav a[href="#menu"] {
+					text-decoration: none;
+					-webkit-tap-highlight-color: transparent;
+					font-size: 2em;
+					color: #dee1e3;
+					z-index: 10005;
+                         display: inline-block;
+				}
+        
+        
 			
         
             #header .svg {
@@ -2863,6 +2872,11 @@
         #header nav a[href="#menu"] {
 				font-size: 1.5em;
 			}
+        
+        .inner {
+		margin-top: 5em
+	}
+      
 	}
 
 /* Menu */
