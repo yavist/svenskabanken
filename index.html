@@ -146,40 +146,45 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-        <script>
-            onInitialise: function (status) {
-    var type = this.options.type;
-    var didConsent = this.hasConsented();
-    if (type == 'opt-in' && didConsent) {
-    // enable cookies
-    }
-    if (type == 'opt-out' && !didConsent) {
-    // disable cookies
-    }
+            <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+            <script>
+    onInitialise: function (status) {
+        var type = this.options.type;
+        var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                !function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"cd437f941472430b",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });
+            }
+            
+            if (type == 'opt-out' && !didConsent) {
+                window.alert("Das Spiel ist leider nicht spielbar ohne Cookies. Tut uns Leid")
+             }
     },
+    
     onStatusChange: function(status, chosenBefore) {
-    var type = this.options.type;
-    var didConsent = this.hasConsented();
-    if (type == 'opt-in' && didConsent) {
-    // enable cookies
-    }
-    if (type == 'opt-out' && !didConsent) {
-    // disable cookies
-    }
+        var type = this.options.type;
+        var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                !function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"cd437f941472430b",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });
+            }
+            
+            if (type == 'opt-out' && !didConsent) {
+                window.alert("Das Spiel ist leider nicht spielbar ohne Cookies. Tut uns Leid")
+            }
     },
+    
     onRevokeChoice: function() {
-    var type = this.options.type;
-    if (type == 'opt-in') {
-    !function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"cd437f941472430b",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script> 
-        <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false">
-    }
-    if (type == 'opt-out') {
-    window.alert("Das Spiel ist leider nicht spielbar ohne Cookies. Tut uns Leid!")
-    }
+        var type = this.options.type;
+            if (type == 'opt-in') {
+                !function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"cd437f941472430b",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });
+            } 
+            
+            if (type == 'opt-out') {
+                window.alert("Das Spiel ist leider nicht spielbar ohne Cookies. Tut uns Leid")
+            }
     }
   
         </script>
-        <script></script>
+
 <script>
 window.cookieconsent.initialise({
   "palette": {
