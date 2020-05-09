@@ -28,7 +28,8 @@
                 <input type="password" id="input_pass" name="input_pass" size="28" placeholder="Passwort">
 
                 <button type="submit">Absenden</button>
-                <a target="_blank" href="https://locked-adventures.de/der-fall/07puzzle.html" style="color:#b26008;font-size:11pt"><p>Kennwort vergessen?</p></a>
+                <a id="hint" style="color:#b26008;font-size:11pt; cursor: pointer;"><p>Kennwort vergessen?</p></a>
+                <div class="hintText" style=" display:none;">Wenden Sie sich an den Kundensupport</div>
             </form>
         </section>
     </main>
@@ -39,6 +40,21 @@
     </footer>
 
     <script src="js/login1.js"></script>
+    <script>
+    window.addEventListener("DOMContentLoaded", event => {
+        let hintButton = document.getElementById("hint");
+        hintButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector(".hintText").style.display = "inline-block";
+        })
+    });
+
+
+    function revealSolution() {
+        document.querySelector(".solution").style.display = "block";
+    }
+
+</script>
 </body>
 
 </html>
