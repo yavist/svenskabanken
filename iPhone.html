@@ -1,0 +1,96 @@
+<html lang="de"><head>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/mvp.css">
+    <style>
+        :root {
+            --color: #3d6a78;
+            --color-accent: #3d6a781f;
+            --color-text: #333;
+            --width-content: 768px;
+        }
+
+        body {
+            background: var(--color-accent);
+        }
+
+        form {
+            background: var(--color-bg);
+            width: 22rem;
+        }
+
+        #hint {
+            cursor: pointer;
+        }
+
+        .solution-text,
+        .hint1-text,
+        .hint2-text {
+            display: none;
+        }
+
+
+        .solution-container,{
+            display: block;
+        }
+
+        .solution-container img {
+            max-width: 50vw;
+        }
+
+        a {
+            color: var(--color);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .solution-container img {
+                max-width: 90vw;
+            }
+        }
+    </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Der Fall II</title>
+</head>
+
+<body>
+    <main>
+
+        <section style="margin-top: 1rem;">
+            <div class="solution-container">
+                
+                <iframe src="https://marvelapp.com/e7fig60?emb=1&amp;iosapp=false&amp;frameless=false" width="452" height="881" allowtransparency="true" frameborder="0" id="myIframe"><script type="text/javascript">document.body.addEventListener('keypress', function(e) {
+  console.log(e.keyCode);
+});</script></iframe>
+                
+                <div><i>Info: Klicke auf "H" um auf den Homescreen zu kommen.</i></div><br>
+                <button id="myBtn">Home</button>
+                <!--<img src="/df2/be/ec.PNG">-->
+
+                <!-- target="_blank" sorgt dafür, dass in einem neuen Tab geöffnet wird -->
+                <!--<a href="/df1/be/pb.pdf" target="_blank"><b>Prüfbericht</b></a>-->
+              
+            </div>
+        </section>
+
+        
+    </main>
+
+
+<script data-cfasync="false">
+    var myBtn = document.getElementById('myBtn');
+var iframe = document.getElementById('myIframe');
+
+myBtn.addEventListener('click', function() {
+  var evt = new Event('keypress');
+  evt.keyCode = '72';
+  iframe.contentDocument.body.dispatchEvent(evt);
+});
+
+
+
+</script>
+
+</body></html>
